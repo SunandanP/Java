@@ -37,3 +37,25 @@ the object using the functions like
     iterator.hasNext() -> bool
     iterator.next() -> T 
     (returns the current object and moves the pointer to the next)
+
+## The collection Interface
+### Collection\<E>
+
+Main operations that the implementer should offer are
+#### <li>  add()
+#### <li>  remove()
+#### <li>  contains()
+#### <li>  size()
+
+## The list interface
+When there's need that the position of the item in the data structure matters
+then using List is necessary.
+    
+    .get(int index) -> get the item at a particular index
+    .remove(int index)
+    .indexOf(Object object) 
+    .lastIndexOf(Object object)
+
+## The comparable interface
+
+

@@ -1,6 +1,4 @@
-package Collections;
-
-import Collections.GenericList;
+package Collections.Iterable;
 
 public class CollectionRun {
     public static void main(String[] args) {
