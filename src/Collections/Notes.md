@@ -57,5 +57,55 @@ then using List is necessary.
     .lastIndexOf(Object object)
 
 ## The comparable interface
+Comparable\<E> defines the comparison operation between two same type of entities
+in the form of a compareTo method which takes the \<E> argument and defines the comparison between the
+current object and the one to be compared.
 
+returns -1 if the current object is smaller in logical sense.
 
+returns 0 if the current object is exactly same (content) in logical sense.
+
+returns 1 if the current object is greater than the one it is being compared with.
+
+In this context we can achieve any positive or negative value to achieve the same results
+
+example :
+    
+    class Demo implements Comparable<Demo>{
+        int value;
+
+        public Demo(int value){
+            this.value = value;
+        }
+        
+        public int compareTo(Demo object){
+            return this.value - object.value;
+        }
+        
+    }
+
+## The Comparator interface
+This is a interface used to create utility comparator classes which
+compare the instances of an class using some logic similar to Comparable interfacre.
+
+    class Example implements Comparator<Demo>{
+        public int compare(Demo o1, Demo o2){
+            return o1.value - o2.value;
+        }
+    }
+
+Use case :
+    
+    Collections.sort(list, new Example());
+
+## Set Interface
+Stores unique data. HashSet is an implementation which does not guarantee the
+order of the items.
+
+Main Operations
+
+Union : set1.addAll(set2)
+
+Intersect : set1.retainAll(set2)
+
+Difference : set1.removeAll(set2)
